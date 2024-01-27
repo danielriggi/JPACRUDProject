@@ -1,0 +1,7 @@
+@charset "UTF-8";
+.player-headshot img {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}

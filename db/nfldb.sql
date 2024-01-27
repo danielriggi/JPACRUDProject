@@ -4,7 +4,7 @@ CREATE DATABASE nfldb;
 -- Switch to the nfldb database
 USE nfldb; 
 
-CREATE USER test@localhost IDENTIFIED BY "test";
+-- CREATE USER test@localhost IDENTIFIED BY "test";
 
 GRANT SELECT, INSERT, UPDATE, DELETE on nfldb.* TO test@localhost;
 
@@ -20,10 +20,12 @@ CREATE TABLE players (
    height decimal(5,2),
    weight decimal(5,2),
    rookie_year int,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);
+   headshot varchar(255),
+   draft_number int,
+   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);
 
 INSERT INTO players (first_name, last_name, birth_date, position_group, position,
-                     college_name, height, weight, rookie_year) VALUES
-    ("Daniel", "Riggi", '1989-03-21', "OL", "T", "Cornell", 76.0, 250.0, 2011);
+                     college_name, height, weight, rookie_year, headshot, draft_number) VALUES
+    ("Daniel", "Riggi", '1989-03-21', "OL", "T", "Cornell", 76.0, 250.0, 2011, "https://lh3.googleusercontent.com/pw/ABLVV84pgTVXtlcrTJOVkkN_Ny8fkS6j2os2eZBRSconMsnu3FFtHJxxclltM0mIQ5-F7ayK09xAzc8hp9uvdlRn0JOm-p06BoALTiBiTqn_ZPPNsZu1-p9E=w2400", 1);
 
