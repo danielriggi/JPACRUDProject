@@ -53,7 +53,7 @@
 
         <br>
 
-        <form action="updateplayer.jsp" method="get">
+        <form action="editPlayer.do" method="get">
             <button type="submit" class="btn btn-primary">Update Player</button>
         </form>
 

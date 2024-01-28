@@ -50,7 +50,9 @@ public class PlayerController {
 	}
 	
 	@RequestMapping(path = "editPlayer.do", method = RequestMethod.GET)
-	public String editPlayer() {
+	public String editPlayer(@RequestParam("editPlayerId") int playerId, Model model) {
+		Players player = playerDAO.findById(playerId);
+		model.addAttribute("player", player);
 		return "player/editplayer";
 	}
 	
@@ -89,8 +91,11 @@ public class PlayerController {
 	}
 	
 	@RequestMapping(path = "deletePlayer.do", method = RequestMethod.POST)
-	public String deletePlayerById(@RequestParam("deletePlayerId") Integer id) {
+	public String deletePlayerById(@RequestParam("deletePlayerId") Integer id, Model model) {
 		Boolean isDeleted = playerDAO.destroy(id);
+		List<Players> playerList = playerDAO.findAll();
+		Collections.sort(playerList, (player1, player2) -> player1.getLastName().compareTo(player2.getLastName()));
+		model.addAttribute("playerList", playerList);
 		return "home";
 	}
 

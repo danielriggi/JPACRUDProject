@@ -29,8 +29,8 @@
                             <div class="player-info">
                                 <h3>${player.displayName}</h3>
                                 <p>Status: ${player.status}</p>
-                                <p>Height: ${player.height}</p>
-                                <p>Weight: ${player.weight}</p>
+                                <p>Height: ${player.height} inches</p>
+                                <p>Weight: ${player.weight} lbs</p>
                                 <p>Birth Date: ${player.birthDate}</p>
                                 <p>Position: ${player.position}</p>
                                 <p>College Name: ${player.collegeName}</p>
@@ -38,9 +38,9 @@
                                 <p>Rookie Year: ${player.rookieYear}</p>
                             </div>
                             <div class="player-buttons mt-2">
-                                <form action="editPlayer.do" method="POST" class="d-inline">
+                                <form action="editPlayer.do" method="get" class="d-inline">
                                     <input type="hidden" name="editPlayerId" value="${player.id}">
-                                    <button type="submit" class="btn btn-primary mr-2">Edit Player</button>
+                                    <button type="submit" class="btn btn-primary mr-2">Update Player</button>
                                 </form>
                                 <form action="deletePlayer.do" method="POST" class="d-inline">
                                     <input type="hidden" name="deletePlayerId" value="${player.id}">
