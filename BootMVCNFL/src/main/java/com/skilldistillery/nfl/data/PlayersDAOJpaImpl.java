@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.skilldistillery.nfl.entities.Players;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 
@@ -21,6 +22,14 @@ class PlayersDAOJpaImpl implements PlayersDAO {
 		return player;
 
 	};
+	
+    public List<Players> findByName(String playerName) {
+        // Create a JPQL query to search for a player by name
+        List<Players> nameList = em.createQuery("SELECT p FROM Players p WHERE p.firstName = :name OR p.lastName = :name OR p.displayName = :name", Players.class)
+        		                      .setParameter("name", playerName).getResultList();
+        return nameList;
+        		                      
+    }
 
 	public List<Players> findAll() {
 		String query = "SELECT p FROM Players p ORDER BY p.id";
@@ -48,9 +57,9 @@ class PlayersDAOJpaImpl implements PlayersDAO {
 		return createPlayer;
 	}
 
-	public Players update(int id, Players updatePlayer) {
+	public Players update(Players updatePlayer) {
 		
-		Players managed = em.find(Players.class, id);
+		Players managed = em.find(Players.class, updatePlayer.getId());
 		
 		managed.setFirstName(updatePlayer.getFirstName());
 		managed.setLastName(updatePlayer.getLastName());

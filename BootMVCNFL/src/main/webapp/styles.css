@@ -1,7 +1,21 @@
 @charset "UTF-8";
-.player-headshot img {
-    max-width: 300px;
-    max-height: 300px;
-    width: auto;
-    height: auto;
+
+.img-fluid.player-image {
+	max-height: 400px;
+    max-width: 350px; /* Adjust the size as needed */
+    align-items: center; /* Vertical center alignment */
+}
+
+/* Add a light gray background to the player containers */
+.player-container {
+    background-color: #ffffff; /* Use the desired shade of gray */
+    border-radius: 5px; /* Add rounded corners for aesthetics */
+}
+
+.not-found-text {
+	font-size: 24px; 
+}
+
+body {
+    background-color: #f5f5f5 !important;
 }

@@ -15,11 +15,17 @@ public class Players {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@Column(name="display_name")
+	private String displayName;
+	
 	@Column(name="first_name")
 	private String firstName;
 	
 	@Column(name="last_name")
 	private String lastName;
+	
+	@Column(name="status")
+	private String status;
 	
 	@Column(name="birth_date")
 	private LocalDate birthDate;
@@ -64,6 +70,28 @@ public class Players {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	
+
+	public String getDisplayName() {
+		return displayName;
+	}
+
+
+	public void setDisplayName(String displayName) {
+		this.displayName = displayName;
+	}
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 
 	public String getFirstName() {
 		return firstName;
@@ -195,10 +223,11 @@ public class Players {
 
 	@Override
 	public String toString() {
-		return "Players [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", birthDate=" + birthDate
-				+ ", positionGroup=" + positionGroup + ", position=" + position + ", collegeName=" + collegeName
-				+ ", height=" + height + ", weight=" + weight + ", rookieYear=" + rookieYear + ", headshot=" + headshot
-				+ ", draftNumber=" + draftNumber + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + "]";
+		return "Players [id=" + id + ", displayName=" + displayName + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", status=" + status + ", birthDate=" + birthDate + ", positionGroup=" + positionGroup
+				+ ", position=" + position + ", collegeName=" + collegeName + ", height=" + height + ", weight="
+				+ weight + ", rookieYear=" + rookieYear + ", headshot=" + headshot + ", draftNumber=" + draftNumber
+				+ ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + "]";
 	}
 	
 	
