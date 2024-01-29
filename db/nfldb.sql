@@ -4,7 +4,7 @@ CREATE DATABASE nfldb;
 -- Switch to the nfldb database
 USE nfldb; 
 
--- CREATE USER test@localhost IDENTIFIED BY "test";
+CREATE USER test@localhost IDENTIFIED BY "test";
 
 GRANT SELECT, INSERT, UPDATE, DELETE on nfldb.* TO test@localhost;
 
