@@ -4,7 +4,7 @@
 Created by Daniel Riggi
 
 ## Project Overfiew
-Welcome to the NFL Player Database project! This application allows users to manage NFL player records using a comprehensive CRUD (Create, Read, Update, Delete) functionality. Built with Spring Boot and a relational database, this application simplifies the management and retrieval of NFL player data, providing a user-friendly interface for exploring player profiles.
+This application allows users to manage NFL player records using a comprehensive CRUD (Create, Read, Update, Delete) functionality. Built with Spring Boot and a relational database, this application simplifies the management and retrieval of NFL player data, providing a user-friendly interface for exploring player profiles.
 
 ## Key Features
 
