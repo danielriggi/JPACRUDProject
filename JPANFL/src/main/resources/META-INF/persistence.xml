@@ -3,7 +3,7 @@
   <persistence-unit name="NFL">
 
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-    <class>com.skilldistillery.nfl.entities.Player</class>
+    <class>com.skilldistillery.nfl.entities.Players</class>
     
     <properties>
       <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/nfldb?useSSL=false" />

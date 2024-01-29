@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 .img-fluid.player-image {
-	max-height: 400px;
-    max-width: 350px; /* Adjust the size as needed */
+	max-height: 400px !important;
+    max-width: 350px !important; /* Adjust the size as needed */
     align-items: center; /* Vertical center alignment */
 }
 
