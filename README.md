@@ -49,7 +49,7 @@ This application allows users to manage NFL player records using a comprehensive
 
 - **Java Persistence API (JPA)**: I integrated JPA, a part of the Java EE ecosystem, to streamline database operations. This allowed me to work with entities, relationships, and queries in a more Java-centric manner.
 
-- **Data Validation**: Before loading data into the database, I implemented rdata validation mechanisms. Invalid data entries were checked and rejected, ensuring data integrity.
+- **Data Validation**: Before loading data into the database, I implemented data validation mechanisms. Invalid data entries were checked and rejected, ensuring data integrity.
 
 ### Command Objects and Inversion of Control (IoC)
 
