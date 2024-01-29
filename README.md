@@ -14,9 +14,9 @@ This application allows users to manage NFL player records using a comprehensive
 
 - **Edit Player Profiles**: Update player records, allowing modifications to player attributes such as name, position, college, and more.
 
-- **Delete Players**: Remove NFL players from the database, with proper error handling to address any potential issues.
+- **Delete Players**: Remove NFL players from the database.
 
-- **Search Players**: Find NFL players based on various search criteria, including name, position, college, and birthdate.
+- **Search Players**: Find NFL players by name. 
 
 # Tech Used
 - **Programming Languages:**
@@ -39,23 +39,17 @@ This application allows users to manage NFL player records using a comprehensive
 
 ### Spring MVC Framework with Data Validation and JPA Integration
 
-- **MVC Architecture**: I embraced the Model-View-Controller (MVC) architectural pattern to maintain a structured and organized codebase, separating concerns effectively.
+- **MVC Architecture**: I used the Model-View-Controller (MVC) architectural pattern to maintain a structured and organized codebase, separating concerns effectively.
 
-- **Controllers**: My controllers were meticulously designed to manage incoming HTTP requests, handle user input, and intelligently route requests to the appropriate components.
+- **Controllers**: Controllers are designed to manage incoming HTTP requests, handle user input, and route requests to the appropriate components.
 
-- **Dependency Injection**: Leveraging Spring's Dependency Injection mechanism, I simplified component management and ensured that my application remained highly modular.
+- **Dependency Injection**: Leveraging Spring's Dependency Injection mechanism, I simplified component management and ensured that my application remained modular.
 
 ### Backend Database Integration with JPA
 
-- **Database Design**: My database schema was thoughtfully designed to optimize data storage and retrieval efficiency.
-
 - **Java Persistence API (JPA)**: I integrated JPA, a part of the Java EE ecosystem, to streamline database operations. This allowed me to work with entities, relationships, and queries in a more Java-centric manner.
 
-- **Data Validation**: Before loading data into the database, I implemented robust data validation mechanisms. Invalid data entries were thoroughly checked and rejected, ensuring data integrity.
-
-- **Transactions**: To maintain data consistency and integrity, I expertly managed database transactions, ensuring that complex operations were executed reliably.
-
-- **Error Handling**: My application featured comprehensive error-handling mechanisms, providing informative feedback to users and simplifying the debugging process.
+- **Data Validation**: Before loading data into the database, I implemented rdata validation mechanisms. Invalid data entries were checked and rejected, ensuring data integrity.
 
 ### Command Objects and Inversion of Control (IoC)
 
