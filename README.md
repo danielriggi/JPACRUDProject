@@ -3,6 +3,8 @@
 # JPACRUDProject
 Created by Daniel Riggi
 
+[Visit the Project](http://52.44.132.108:8080/BootMVCNFL/)
+
 ## Project Overfiew
 This application allows users to manage NFL player records using a comprehensive CRUD (Create, Read, Update, Delete) functionality. Built with Spring Boot and a relational database, this application simplifies the management and retrieval of NFL player data, providing a user-friendly interface for exploring player profiles.
 

@@ -21,7 +21,6 @@ import com.skilldistillery.nfl.entities.Players;
 public class PlayerController {
 	@Autowired
 	private PlayersDAO playerDAO;
-	private static final Logger logger = LoggerFactory.getLogger(PlayerController.class);
 
 	@RequestMapping(path = { "", "/", "home.do" })
 	public String index(Model model) {
